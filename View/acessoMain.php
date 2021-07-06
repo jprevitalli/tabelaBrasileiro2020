@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container m-5">
 
-        <form id="formlogin" action="areaUsuario.php" method="POST">
+        <form id="formlogin" action="../Controller/logarMain.php" method="POST">
             <?php
             session_start();
             $msg = isset($_SESSION["msg"]) ? $_SESSION["msg"] : "";

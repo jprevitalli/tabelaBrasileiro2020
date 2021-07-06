@@ -12,5 +12,5 @@ $pin = $_POST["pin"];
 if(insereUsuario($conexao, $nome, $login, $senha, $pin)){
     header("Location: ../View/areaUsuario.php");
 }else{
-    header("Location: ../View/areaUsuario.php");
+    header("Location: ");
 }

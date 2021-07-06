@@ -74,7 +74,7 @@ include_once("../Model/bancoUsuario.php");
                         </ul>
                     </li>
 
-                    <li class="nav-item dropdown"><a class="nav-link" href="#"> Olá, <?php echo ($_SESSION["email"]); ?></a>
+                    <li class="nav-item dropdown"><a class="nav-link" href="#"> Olá, <?php echo($_SESSION["nome"]); ?></a>
                     </li>
                     
                     <li class="nav-item dropdown">

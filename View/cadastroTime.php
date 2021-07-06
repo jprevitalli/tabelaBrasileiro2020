@@ -8,7 +8,7 @@ include('header.php');
 
 <div class="container">
 
-  <form action="../Controller/inserirTime.php" method="GET" class="row g-3">
+  <form action="../Controller/inserirTime.php" method="POST" class="row g-3">
 
     <div class="col-md-8">
       <label for="inputTime" class="form-label">Time</label>

@@ -2,39 +2,24 @@
 
 session_start();
 
-function insereUsuario($conexao, $nome, $email, $senha, $pin)
+function insereUsuario($conexao, $nome, $login, $senha, $pin)
 {
 
     $option = ['cost' => 8];
 
     $senhacryp = password_hash($senha, PASSWORD_BCRYPT, $option);
 
-    $query = "insert into tbusuario(nomeusu, loginusu, senhausu, pinusu) values('{$nome}','{$email}','{$senhacryp}','{$pin}')";
+    $query = "insert into tbusuario(nomeusu, loginusu, senhausu, pinusu) values('{$nome}','{$login}','{$senhacryp}','{$pin}')";
     $resultado = mysqli_query($conexao, $query);
     return $resultado;
 }
 
-function buscarUsuario($conexao, $email)
+
+
+function buscarAcesso($conexao, $login, $senha)
 {
 
-    $query = "select * from tbusuario where loginusu= '{$email}'";
-
-    $resultado = mysqli_query($conexao, $query);
-
-
-    $infoemail = mysqli_fetch_assoc($resultado);
-
-
-    $_SESSION["emailusubusca"] = $infoemail["loginusu"];
-    $_SESSION["codusubusca"] = $infoemail["codusu"];
-
-    return $infoemail;
-}
-
-function buscarAcesso($conexao, $email, $senha)
-{
-
-    $query = "select * from tbusuario where loginusu= '{$email}'";
+    $query = "select * from tbusuario where loginusu= '{$login}'";
 
     $resultado = mysqli_query($conexao, $query);
 
@@ -43,10 +28,12 @@ function buscarAcesso($conexao, $email, $senha)
         $linha = mysqli_fetch_assoc($resultado);
         if (password_verify($senha, $linha["senhausu"])) {
 
-            $_SESSION["email"] = $linha["loginusu"];
+            $_SESSION["login"] = $linha["loginusu"];
             $_SESSION["codusu"] = $linha["codusu"];
 
-            $_SESSION["retorno"] = buscarNomeUsuario($conexao, $linha["codusu"]);
+            $_SESSION["nome"] = $linha["nomeusu"];
+
+           
 
 
 

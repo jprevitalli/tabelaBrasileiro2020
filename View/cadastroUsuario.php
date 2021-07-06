@@ -6,7 +6,7 @@ include("header.php");
 
 <div class="container">
 
-    <form action="" method="POST" class="row g-3">
+    <form action="../Controller/inserirUsuario.php" method="POST" class="row g-3">
 
         <div class="col-12">
             <label for="inputNome" class="form-label">Nome</label>
@@ -16,7 +16,7 @@ include("header.php");
 
         <div class="col-12">
             <label for="inputLogin" class="form-label">E-mail</label>
-            <input type="email" required name="e-mail" class="form-control" id="inputLogin">
+            <input type="email" required name="login" class="form-control" id="inputLogin">
         </div>
 
         <div class="col-md-6">
