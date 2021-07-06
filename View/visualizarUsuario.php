@@ -4,7 +4,7 @@
 include_once("../Model/bancoUsuario.php");
 include_once("header.php");
 include_once("../Model/conexao.php");
-liberaAcesso();
+//liberaAcesso();
 ?>
 
 
@@ -31,25 +31,25 @@ liberaAcesso();
                 <th scope="col">Código do Usuário</th>
                 <th scope="col">Nome do Usuário</th>
                 <th scope="col">Login do Usuário</th>
-                <th scope="col">Senha do Usuário</th>
-                <th scope="col">PIN do Usuário</th>
                 <th scope="col">Apagar</th>
 
             </tr>
         </thead>
         <tbody>
         
-            <!-- <?php
+            <?php
             $usuario = isset($_POST["usuario"]) ? $_POST["usuario"] : "";
-            
-            $dado = visuEmailUsuario($conexao, $usuario);
+        
+            $dado = visuEmailUsuario($conexao, $nome, $usuario);
             
             foreach ($dado as $dados) :
 
-            ?> -->
+            ?> 
                 <tr>
                     <th scope="row"><?= $dados["codusu"] ?></th>
+                    <td><?= $dados["nomeusu"] ?></td>
                     <td><?= $dados["loginusu"] ?></td>
+                    
                     <td>
                         <form action="../Controller/deleteUsuario.php" method="Post">
                             <input type="hidden" name="codusu" value="<?= $dados["codusu"] ?>">

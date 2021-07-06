@@ -9,12 +9,12 @@ function insereUsuario($conexao, $nome, $email, $senha, $pin)
 
     $senhacryp = password_hash($senha, PASSWORD_BCRYPT, $option);
 
-    $query = "insert into tbusuario(nomeusu, loginusu,senhausu, pinusu) values('{$nome}','{$email}','{$senhacryp}','{$pin}')";
+    $query = "insert into tbusuario(nomeusu, loginusu, senhausu, pinusu) values('{$nome}','{$email}','{$senhacryp}','{$pin}')";
     $resultado = mysqli_query($conexao, $query);
     return $resultado;
 }
 
-/*function buscarUsuario($conexao, $email)
+function buscarUsuario($conexao, $email)
 {
 
     $query = "select * from tbusuario where loginusu= '{$email}'";
@@ -29,9 +29,9 @@ function insereUsuario($conexao, $nome, $email, $senha, $pin)
     $_SESSION["codusubusca"] = $infoemail["codusu"];
 
     return $infoemail;
-}*/
+}
 
-/*function buscarAcesso($conexao, $email, $senha)
+function buscarAcesso($conexao, $email, $senha)
 {
 
     $query = "select * from tbusuario where loginusu= '{$email}'";
@@ -57,9 +57,9 @@ function insereUsuario($conexao, $nome, $email, $senha, $pin)
         }
     }
     return "E-mail não cadastrado!";
-}*/
+}
 
-/*function trocarsenhausuario($conexao, $email, $novasenha, $pin)
+function trocarsenhausuario($conexao, $email, $novasenha, $pin)
 {
     //verificar se o email e o pin estão corretos
     $query = "Select * from tbusuario where loginusu='{$email}' and pinusu='{$pin}'";
@@ -81,12 +81,12 @@ function insereUsuario($conexao, $nome, $email, $senha, $pin)
         $resultado = "erro";
         return $resultado;
     }
-}*/
+}
 
-/*function logout()
+function logout()
 {
     return session_destroy();
-}*/
+}
 
 
 function liberaAcesso()
@@ -96,16 +96,16 @@ function liberaAcesso()
 
     if (!$email) {
         $_SESSION["msg"] = "<div class='alert alert-danger' role='alert'>Faça login para ter acesso ao sistema!</div>";
-        header("Location: ../View/acessoFun.php");
+        header("Location: ../View/acessoMain.php");
         die();
     }
 }
 
-/*
-function buscarNomeUsuario($conexao, $codusu)
+
+/*function buscarNomeUsuario($conexao, $codusu)
 {
 
-    $query = "Select * from tbfuncionario where codusuFK = '{$codusu}'";
+    $query = "Select * from tbusuario where codusuFK = '{$codusu}'";
     $resultadofun = mysqli_query($conexao, $query);
     $resulArrayfun = mysqli_fetch_assoc($resultadofun);
 
@@ -135,22 +135,19 @@ function buscarNomeUsuario($conexao, $codusu)
 }
 */
 
-
-/*
 function visuEmailUsuario($conexao, $usuario)
 {
 
     $query = "Select * from tbusuario where loginusu like '%{$usuario}%'";
     $resultado = mysqli_query($conexao, $query);
 
-
     return $resultado;
 }
-*/
 
 
 
-/*
+
+
 function visuCodigoUsuario($conexao, $codigo)
 
 {
@@ -163,10 +160,10 @@ function visuCodigoUsuario($conexao, $codigo)
 
     return $resultado;
 }
-*/
 
 
-/*
+
+
 function deleteUsuario($conexao, $codusu)
 {
 
@@ -174,4 +171,3 @@ function deleteUsuario($conexao, $codusu)
     $resultado = mysqli_query($conexao, $query);
     return $resultado;
 }
-*/
