@@ -42,7 +42,7 @@
         </div>
       
         <button type="submit" class="btn btn-primary">Trocar a Senha</button>
-        <a class="btn btn-danger" href="acessoFun.php">Voltar</a>
+        <a class="btn btn-danger" href="acessoMain.php">Voltar</a>
     </form>
 
     <?php

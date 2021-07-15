@@ -40,7 +40,7 @@ include_once("../Model/conexao.php");
             <?php
             $usuario = isset($_POST["usuario"]) ? $_POST["usuario"] : "";
         
-            $dado = visuEmailUsuario($conexao, $nome, $usuario);
+            $dado = visuEmailUsuario($conexao, $usuario);
             
             foreach ($dado as $dados) :
 

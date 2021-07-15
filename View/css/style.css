@@ -1,7 +1,232 @@
 
+
+
 body{
-       background-color: white;
+       background-color:white;
+     
        /*background-color: #0275d8;*/
 }
+
+
+
+/* ######### visualizarJogos ######## */
+
+
+section{
+       margin-top: 15px;
+       width: 100%;
+       height: 130px;
+       border: 1px solid #0275d8;
+       
+}
+
+.timeline_grid{
+      
+       width: 100%;
+       height: 90px;
+       
+}
+
+.timeline_header{
+       width: 100%;
+       height: 24px;
+       
+}
+
+.timeline_header_rodada{
+       
+       height: 16.8px;
+       
+}
+
+.timeline_header_grupo_voltar{
+       
+       width: 100%;
+       height: 16.8px; 
+       
+}
+
+.separacao_voltar{
+       
+       height: 16.8px;
+       
+}
+
+.timeline_voltar_botao{
+       
+       margin-top: 7.2px;
+       height: 19.2px;
+     
+}
+
+.button_timeline{
+        width: 169px;
+        height: 58px;
+        border: 1px;
+        float: left;
+        margin-right: 10px;
+}
+
+ul{
+       list-style-type: none;
+}
+
+
+.section_header{
+       margin-top: 50px;
+       
+}
+
+.section_logo{
+       float: left;
+       margin-right: 10px;
+}
+
+
+/* #############  Visualizar Jogos ####################### */
+
+.headerjogos{
+       margin-top: 30px;
+             
+}
+
+.tabela_listajogo{
+       width: 395px;
+       height: 1195px;
+       
+}
+
+.lista_jogosrodada{
+       width: 395px;
+       height: 40px;
+       margin-top: 20px;
+       border-top: 1px solid #ddd;
+       border-bottom: 1px solid silver;
+       color: #111;
+       display: flex;
+       font-family: "Calibri";
+       font-size: 1em;
+       font-style: normal;
+       font-weight: 700;
+       justify-content: center;
+       line-height: 2.4375em;
+       text-align: center;
+       text-transform: uppercase;
+          
+}
+
+.setaesquerda_lista{
+       cursor: pointer;
+}
+
+.numero_rodada{
+     
+       flex-grow: 2;
+           
+}
+
+.setadireita_lista{
+       text-align: right;
+       
+}
+
+.jogo_informacoes{
+       text-align: center;
+}
+
+
+
+.data_jogo{
+       color: #555;
+       font-family: 'Calibri';
+       font-style: normal;
+       font-weight: 700;
+       letter-spacing: -.3px;
+       text-transform: uppercase;
+       text-align: center; 
+}
+
+.horario_jogo{
+       color: #555;
+       font-family: 'Calibri';
+       font-style: normal;
+       font-weight: 700;
+       letter-spacing: -.3px;
+       text-transform: uppercase;
+       text-align: center;
+
+}
+
+
+/* ######## VISUALIZAR JOGOS ####### */
+
+.jogo1{
+      
+       float: left;
+       width: 400px;
+       height: 109px;
+}
+
+
+.placar{
+       
+       width: 400px;
+       
+       float: left;
+}
+
+.placarmandante{
+       width: 120px;
+       float: left;
+}
+
+.imgmandante{
+       
+       float: right;
+       
+       
+}
+
+
+.mandante{
+       margin-right: 5px;
+       font-size: 20px;
+       float: right;
+       
+       
+       
+}
+
+
+
+.verso{
+       float: left;
+       width: 120px;
+}
+
+.versox{
+
+       
+       text-align: center;
+}
+
+.placarvisitante{
+       float: left;
+       width: 120px;
+}
+
+.imgvisitante{
+       float: left;
+       margin-right: 5px;
+}
+
+.visitante{
+       font-size: 20px;
+       float: left;
+       
+}
+
+
+
 
 

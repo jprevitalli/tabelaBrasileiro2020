@@ -4,48 +4,68 @@ include_once("../Model/bancoTime.php");
 include('header.php');
 ?>
 
-
-
 <div class="container">
 
   <form action="../Controller/inserirTime.php" method="POST" class="row g-3">
 
-    <div class="col-md-8">
-      <label for="inputTime" class="form-label">Time</label>
-      <input type="text" name="time" class="form-control" id="inputTime">
-    </div>
+  <div class="col-md-6">
+                    <label for="inputTime" class="form-label">Time</label>
+                    <select required name="time" class="form-select form-select" aria-label=".form-select-lg example">
+                        <option selected>Escolha o time:</option>
+                        <option value="América Mineiro">América Mineiro</option>
+                        <option value="Athletico Paranaense">Athletico Paranaense</option>
+                        <option value="Atlético-MG">Atlético-MG</option>
+                        <option value="Atlético-GO">Atlético-GO</option>
+                        <option value="Bahia">Bahia</option>                    
+                        <option value="Ceará">Ceará</option>
+                        <option value="Chapecoense">Chapecoense</option>
+                        <option value="Corinthians">Corinthians</option>
+                        <option value="Cuiabá">Cuiabá</option>
+                        <option value="Flamengo">Flamengo</option>
+                        <option value="Fluminense">Fluminense</option>
+                        <option value="Fortaleza">Fortaleza</option>
+                        <option value="Grêmio">Grêmio</option>
+                        <option value="Internacional">Internacional</option>
+                        <option value="Juventude">Juventude</option>
+                        <option value="Palmeiras">Palmeiras</option>
+                        <option value="RedBull Bragantino">RedBull Bragantino</option>
+                        <option value="Santos">Santos</option>
+                        <option value="São Paulo">São Paulo</option>
+                        <option value="Sport">Sport</option>
+                    </select>
+                </div>
 
-    <div class="col-md-4">
+    <div class="col-md-6">
             <label for="inputEstado" class="form-label">Estado</label>
             <select name="nomeestado" class="form-select form-select" aria-label=".form-select-lg example">
                 <option selected>Escolha o estado:</option>
-                <option value="acre">Acre</option>
-                <option value="alagoas">Alagoas</option>
-                <option value="amapa">Amapá</option>
-                <option value="amazonas">Amazonas</option>
-                <option value="bahia">Bahia</option>
-                <option value="ceara">Ceará</option>
-                <option value="distritofederal">Distrito Federal</option>
-                <option value="espiritosanto">Espirito Santo</option>
-                <option value="goias">Goiás</option>
-                <option value="maranhao">Maranhão</option>
-                <option value="matogrosso">Mato Grosso</option>
-                <option value="matogrossodosul">Mato Grosso do Sul</option>
-                <option value="minasgerais">Minas Gerais</option>
-                <option value="para">Pará</option>
-                <option value="paraiba">Paraíba</option>
-                <option value="parana">Paraná</option>
-                <option value="pernambuco">Pernambuco</option>
-                <option value="piaui">Piauí</option>
-                <option value="riodejaneiro">Rio de Janeiro</option>
-                <option value="riograndedonorte">Rio Grande do Norte</option>
-                <option value="riograndedosul">Rio Grande do Sul</option>
-                <option value="rondonia">Rondônia</option>
-                <option value="roraima">Roraima</option>
-                <option value="santacatarina">Santa Catarina</option>
-                <option value="saopaulo">São Paulo</option>
-                <option value="sergipe">Sergipe</option>
-                <option value="tocantins">Tocantins</option>
+                <option value="Acre">Acre</option>
+                <option value="Alagoas">Alagoas</option>
+                <option value="Amapá">Amapá</option>
+                <option value="Amazonas">Amazonas</option>
+                <option value="Bahia">Bahia</option>
+                <option value="Ceará">Ceará</option>
+                <option value="Distrito Federal">Distrito Federal</option>
+                <option value="Espírito Santo">Espírito Santo</option>
+                <option value="Goiás">Goiás</option>
+                <option value="Maranhão">Maranhão</option>
+                <option value="Mato Grosso">Mato Grosso</option>
+                <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                <option value="Minas Gerais">Minas Gerais</option>
+                <option value="Pará">Pará</option>
+                <option value="Paraíba">Paraíba</option>
+                <option value="Paraná">Paraná</option>
+                <option value="Pernambuco">Pernambuco</option>
+                <option value="Piauí">Piauí</option>
+                <option value="Rio de Janeiro">Rio de Janeiro</option>
+                <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                <option value="Rondônia">Rondônia</option>
+                <option value="Roraima">Roraima</option>
+                <option value="Santa Catarina">Santa Catarina</option>
+                <option value="São Paulo">São Paulo</option>
+                <option value="Sergipe">Sergipe</option>
+                <option value="Tocantins">Tocantins</option>
             </select>
 
         </div>

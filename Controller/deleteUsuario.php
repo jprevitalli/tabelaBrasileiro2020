@@ -1,5 +1,6 @@
 <?php
 
+
 include_once("../View/header.php");
 include_once("../Model/bancoUsuario.php");
 include_once("../Model/conexao.php");
@@ -16,3 +17,5 @@ if(deleteUsuario($conexao, $codusu)){
 
 
 include_once("../View/footer.php");
+
+?>

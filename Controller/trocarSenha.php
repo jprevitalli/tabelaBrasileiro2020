@@ -15,7 +15,7 @@ if($info === "erro"){
     header("Location: ../View/formEsqueciSenha.php");
 }else{
     $_SESSION["msg"] = "<div class='alert alert-success' role='alert'>Sua senha foi alterada com sucesso!</div>";
-    header("Location: ../View/acessoFun.php");
+    header("Location: ../View/acessoMain.php");
 }
 
 ?>

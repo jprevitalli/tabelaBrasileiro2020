@@ -10,7 +10,9 @@ $senha = $_POST["senha"];
 $pin = $_POST["pin"];
 
 if(insereUsuario($conexao, $nome, $login, $senha, $pin)){
-    header("Location: ../View/areaUsuario.php");
+    $_SESSION["msg"] = "<div class='alert alert-success' role='alert'>Usuário cadastrado com sucesso!</div>";
+    header("Location: ../View/acessoMain.php");
 }else{
-    header("Location: ");
+    $_SESSION["msg"] = "<div class='alert alert-danger' role='alert'>Usuário não foi cadastrado!</div>";
+    header("Location: ../View/cadastroUsuario.php");
 }

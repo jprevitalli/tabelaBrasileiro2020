@@ -9,7 +9,7 @@ include_once("../Model/conexao.php");
 
 <div class="container">
 
-    <form action="" method="POST" class="row g-3">
+    <form action="alterarTime.php" method="POST" class="row g-3">
 
         <div class="col-12">
             <label class="form-label">Digite o Nome do Time:</label>
@@ -18,7 +18,7 @@ include_once("../Model/conexao.php");
 
         <div class="col-12">
             <label class="form-label">Escolha o Estado(região) do Time:</label>
-            <input type="text" required name="estadoTime" class="form-control">
+            <input type="text" required name="estadotime" class="form-control">
         </div>
         
         
@@ -57,7 +57,7 @@ include_once("../Model/conexao.php");
                         <a class="btn btn-primary" href="alterarTime.php?codigo=<?= $dados["codtime"] ?>">Alterar</a>
                     </td>
                     <td>
-                        <form action="../Controller/deletetime.php" method="Post">
+                        <form action="../Controller/deleteTime.php" method="Post">
                             <input type="hidden" name="codtime" value="<?= $dados["codtime"] ?>">
                             <button type="submit" class="btn btn-danger">Deletar</button>
                         </form>

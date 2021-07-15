@@ -1,7 +1,7 @@
 <?php
 
 include_once("../View/header.php");
-include_once("../Model/bancoFilme.php");
+include_once("../Model/bancoTime.php");
 include_once("../Model/conexao.php");
 
 extract($_REQUEST, EXTR_OVERWRITE);

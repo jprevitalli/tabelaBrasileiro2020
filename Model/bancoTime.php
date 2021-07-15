@@ -1,7 +1,7 @@
 <?php
 
-function insereTime($conexao, $time, $nomeestado, $escudo, $sobretime){
-    $query = "insert into tbtimes(nometime, estadotime, escudotime, historiatime) values('{$time}', '{$nomeestado}', '{$escudo}', '{$sobretime}')";
+function insereTime($conexao, $time, $estadotime, $escudo, $sobretime){
+    $query = "insert into tbtimes(nometime, estadotime, escudotime, historiatime) values('{$time}', '{$estadotime}', '{$escudo}', '{$sobretime}')";
     $resultado = mysqli_query($conexao,$query);
     return $resultado;
 
@@ -17,9 +17,9 @@ function visuNomeTime($conexao, $nometime){
 
 }
 
-function visuCodigoTime($conexao, $codigo){
+function visuCodigoTime($conexao, $codigotime){
 
-    $query = "Select * from tbtimes where codtime={$codigo}";
+    $query = "Select * from tbtimes where codtime={$codigotime}";
     $resultado = mysqli_query ($conexao, $query);
     return $resultado;
 

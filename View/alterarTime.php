@@ -1,13 +1,13 @@
 <?php
 include_once("../Model/bancoUsuario.php");
-liberaAcesso();
+//liberaAcesso();
 include_once('header.php');
 include_once('../Model/conexao.php');
 include_once('../Model/bancoTime.php');
 
-$codigo = $_GET["codigo"];
+$codigotime = $_GET["codigo"];
 
-$resul = visuCodigoTime($conexao, $codigo);
+$resul = visuCodigoTime($conexao, $codigotime);
 $time = mysqli_fetch_assoc($resul);
 
 ?>
@@ -28,36 +28,36 @@ $time = mysqli_fetch_assoc($resul);
 
     <div class="col-md-3">
             <label for="inputEstado" class="form-label">Estado</label>
-            <select required name="nomeestado" class="form-select form-select" aria-label=".form-select-lg example">
+            <select required name="estado" class="form-select form-select" aria-label=".form-select-lg example">
                 <option value="<?=$time['estadotime']?>" selected ><?=$time['estadotime']?></option>
-                <option selected>Escolha o estado:</option>
-                <option value="acre">Acre</option>
-                <option value="alagoas">Alagoas</option>
-                <option value="amapa">Amapá</option>
-                <option value="amazonas">Amazonas</option>
-                <option value="bahia">Bahia</option>
-                <option value="ceara">Ceará</option>
-                <option value="distritofederal">Distrito Federal</option>
-                <option value="espiritosanto">Espirito Santo</option>
-                <option value="goias">Goiás</option>
-                <option value="maranhao">Maranhão</option>
-                <option value="matogrosso">Mato Grosso</option>
-                <option value="matogrossodosul">Mato Grosso do Sul</option>
-                <option value="minasgerais">Minas Gerais</option>
-                <option value="para">Pará</option>
-                <option value="paraiba">Paraíba</option>
-                <option value="parana">Paraná</option>
-                <option value="pernambuco">Pernambuco</option>
-                <option value="piaui">Piauí</option>
-                <option value="riodejaneiro">Rio de Janeiro</option>
-                <option value="riograndedonorte">Rio Grande do Norte</option>
-                <option value="riograndedosul">Rio Grande do Sul</option>
-                <option value="rondonia">Rondônia</option>
-                <option value="roraima">Roraima</option>
-                <option value="santacatarina">Santa Catarina</option>
-                <option value="saopaulo">São Paulo</option>
-                <option value="sergipe">Sergipe</option>
-                <option value="tocantins">Tocantins</option>
+                
+                <option value="Acre">Acre</option>
+                <option value="Alagoas">Alagoas</option>
+                <option value="Amapá">Amapá</option>
+                <option value="Amazonas">Amazonas</option>
+                <option value="Bahia">Bahia</option>
+                <option value="Ceará">Ceará</option>
+                <option value="Distrito Federal">Distrito Federal</option>
+                <option value="Espírito Santo">Espírito Santo</option>
+                <option value="Goiás">Goiás</option>
+                <option value="Maranhão">Maranhão</option>
+                <option value="Mato Grosso">Mato Grosso</option>
+                <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                <option value="Minas Gerais">Minas Gerais</option>
+                <option value="Pará">Pará</option>
+                <option value="Paraíba">Paraíba</option>
+                <option value="Paraná">Paraná</option>
+                <option value="Pernambuco">Pernambuco</option>
+                <option value="Piauí">Piauí</option>
+                <option value="Rio de Janeiro">Rio de Janeiro</option>
+                <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                <option value="Rondônia">Rondônia</option>
+                <option value="Roraima">Roraima</option>
+                <option value="Santa Catarina">Santa Catarina</option>
+                <option value="São Paulo">São Paulo</option>
+                <option value="Sergipe">Sergipe</option>
+                <option value="Tocantins">Tocantins</option>
             </select>
 
         </div>

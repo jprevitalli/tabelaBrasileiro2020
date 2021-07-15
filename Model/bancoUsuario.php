@@ -33,9 +33,6 @@ function buscarAcesso($conexao, $login, $senha)
 
             $_SESSION["nome"] = $linha["nomeusu"];
 
-           
-
-
 
             return $linha["loginusu"];
         } else {
@@ -88,39 +85,6 @@ function liberaAcesso()
     }
 }
 
-
-/*function buscarNomeUsuario($conexao, $codusu)
-{
-
-    $query = "Select * from tbusuario where codusuFK = '{$codusu}'";
-    $resultadofun = mysqli_query($conexao, $query);
-    $resulArrayfun = mysqli_fetch_assoc($resultadofun);
-
-    $nomefun = $resulArrayfun["nomefun"];
-
-    $query = "Select * from tbgrupo where codusuFK = '{$codusu}'";
-    $resultadogp = mysqli_query($conexao, $query);
-    $resulArraygp = mysqli_fetch_assoc($resultadogp);
-
-    $codigogp = $resulArraygp["codcliFK"];
-    
-
-    if (!$nomefun && !$codigogp) {
-        $n = "0";
-        return $n;
-    } elseif (!$nomefun) {
-        $n="1";
-        return $n;
-    } elseif (!$codigogp) {
-        $n="3";
-        return $n;
-    } else {
-        $n="2";
-        return $n;
-    }
-    
-}
-*/
 
 function visuEmailUsuario($conexao, $usuario)
 {
