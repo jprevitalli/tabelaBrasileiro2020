@@ -23,7 +23,7 @@ include_once("../Model/conexao.php");
         </div>
 
     </form>
-
+    <hr>
     <?php
     $codjogosrodada = isset($_POST["codjogosrodada"]) ? $_POST["codjogosrodada"] : "";
     $dado = visuResultados($conexao, $codjogosrodada);
@@ -60,7 +60,7 @@ include_once("../Model/conexao.php");
 
                 <div class="col-4">
                     <label class="form-label">Data do jogo:</label>
-                    <input type="date" readonly name="datajogo" value="<?= $dados["dtjogosrodada"] ?>" class="form-control">
+                    <input type="date" readonly name="datajogorodada" value="<?= $dados["dtjogosrodada"] ?>" class="form-control">
                 </div>
 
                 <div class="col-4">
@@ -70,7 +70,7 @@ include_once("../Model/conexao.php");
 
 
                 <div class="col-md-6">
-            <label for="inputResultado" class="form-label">Resultado do Jogo</label>
+            <label for="inputResultado" class="form-label">Mandante:</label>
             <select required name="golsmandante" class="form-select form-select" aria-label=".form-select-lg example">
                 <option selected>Escolha o placar:</option>
                 <option value="0">0</option>
@@ -88,6 +88,7 @@ include_once("../Model/conexao.php");
             </select>
             </div>
             <div class="col-md-6">
+            <label for="inputResultado" class="form-label">Visitante:</label>
             <select required name="golsvisitante" class="form-select form-select" aria-label=".form-select-lg example">
                 <option selected>Escolha o placar:</option>
                 <option value="0">0</option>
@@ -110,32 +111,15 @@ include_once("../Model/conexao.php");
                     <button type="submit" class="btn btn-primary">Salvar</button>
                 </div>
 
-          
-
 
             </form>
 
-
-
-            
-                <tbody>
-
-                    <tr>
-                        <th scope="row"></th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-
-                    </tr>
             <?php
         endforeach;
     }
             ?>
 
-                </tbody>
-            </table>
+              
 
 </div>
 
